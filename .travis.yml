@@ -2,7 +2,7 @@
 language: java
 
 before_script:
-  - wget http://downloads.sourceforge.net/project/lportal/Liferay%20Portal/6.2.1%20GA2/liferay-portal-tomcat-6.2-ce-ga2-20140319114139101.zip -O /tmp/liferay.zip && \
+  - wget http://downloads.sourceforge.net/project/lportal/Liferay%20Portal/6.2.1%20GA2/liferay-portal-tomcat-6.2-ce-ga2-20140319114139101.zip -O /tmp/liferay.zip
   - tar -xvf unzip /tmp/liferay.zip
   - ln -s /tmp/liferay-portal-6.2-ce-ga2 /tmp/liferay-home
   - echo "app.server.parent.dir=/tmp/liferay-home " > $TRAVIS_BUILD_DIR/build.$TRAVIS_OS_NAME.properties
