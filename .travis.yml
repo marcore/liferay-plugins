@@ -7,8 +7,9 @@ before_install:
   -  sudo apt-get install -f unzip
 before_script:
   - wget http://downloads.sourceforge.net/project/lportal/Liferay%20Portal/6.2.1%20GA2/liferay-portal-tomcat-6.2-ce-ga2-20140319114139101.zip -O /tmp/liferay.zip
-  - unzip /tmp/liferay.zip -d /tmp
+  - unzip -qq /tmp/liferay.zip -d /tmp
   - ln -s /tmp/liferay-portal-6.2-ce-ga2 /tmp/liferay-home
-  - echo "app.server.parent.dir=/tmp/liferay-home " > $TRAVIS_BUILD_DIR/build.$TRAVIS_OS_NAME.properties
+  - echo "app.server.parent.dir=/tmp/liferay-home " > home/travis/build/marcore/liferay-plugins/build.marcore.properties
+  - ls /home/travis/build/marcore/liferay-plugins/build*
 
 
